@@ -10,6 +10,11 @@ export default {
         {
             path: ':id',
             name: 'entry-view-daybook',
+            props: (route) => {
+                return {
+                    id: route.params.id
+                }
+            },
             component: () => import(/* EntryViewDayBook */ '@/modules/daybook/views/EntryViewDayBook'),
         }
     ]

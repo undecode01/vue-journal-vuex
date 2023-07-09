@@ -8,6 +8,15 @@
                 v-model="term"
             >
         </div>
+        <div class="mt-2 d-flex flex-column">
+            <button 
+                class="btn btn-primary mx-3"
+                @click="$router.push({ name: 'entry-view-daybook', params: { id: 'new' } })"
+            >
+                <i class="fa fa-plus-"></i>
+                Nueva entrada
+            </button>
+        </div>
         <div class="entry-scrollarea">
             <Entry
                 v-for="entry in entriesByTermn"
@@ -49,7 +58,7 @@ export default {
 }
 
 .entry-scrollarea{
-    height: calc( 100vh - 100px );
+    height: calc( 100vh - 110px );
     overflow-y: scroll;
 }
 </style>

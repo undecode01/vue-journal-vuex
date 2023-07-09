@@ -1,5 +1,8 @@
 <template>
-    <button class="btn btn-primary d-flex align-items-center justify-content-center">
+    <button 
+        class="btn btn-primary d-flex align-items-center justify-content-center"
+        @click="$emit('on:click')"
+    >
         <i 
             class="fa fa-2x"
             :class="icon"

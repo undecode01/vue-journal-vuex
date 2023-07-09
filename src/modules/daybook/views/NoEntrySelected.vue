@@ -2,7 +2,9 @@
     <div class="d-flex justify-content-center">
         <h1 class="align-self-center">No hay nada seleccionado</h1>
     </div>
-    <Fab/>
+    <Fab
+        @on:click="$router.push({ name: 'entry-view-daybook', params: { id: 'new' } })"
+    />
 </template>
 
 <script>
